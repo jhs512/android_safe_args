@@ -1,0 +1,28 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/gray</item>
+        <item name="colorOnPrimary">@color/text_white</item>
+        <item name="android:statusBarColor">@color/dark_grey</item>
+        <item name="colorSecondary">@color/light_gray</item>
+        <item name="colorSurface">@color/gray</item>
+        <item name="android:colorBackground">@color/dark_grey</item>
+        <item name="colorOnBackground">@color/text_white</item>
+    </style>
+
+    <style name="CutCorners_downloadButton" parent="">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeTopLeft">100%</item>
+        <item name="cornerSizeTopRight">100%</item>
+    </style>
+
+    <style name="roundCorners_GridImage" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+
+</resources>

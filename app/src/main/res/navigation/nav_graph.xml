@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/displayImagesFragment">
+
+    <action android:id="@+id/action_global_mainFragment"
+        app:destination="@id/displayImagesFragment"/>
+
+    <fragment
+        android:id="@+id/displayImagesFragment"
+        android:name="com.marshallstudio.imager.DisplayImagesFragment"
+        android:label="fragment_display_images"
+        tools:layout="@layout/fragment_display_images">
+        <action
+            android:id="@+id/action_displayImagesFragment_to_previewImageFragment"
+            app:destination="@id/previewImageFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewImageFragment"
+        android:name="com.marshallstudio.imager.PreviewImageFragment"
+        android:label="PreviewImageFragment">
+        <argument
+            android:name="imageDetails"
+            app:argType="com.marshallstudio.imager.Hits" />
+    </fragment>
+</navigation>

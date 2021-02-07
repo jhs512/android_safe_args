@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/spinner_Categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Categories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toEndOf="@+id/tv_Categories"
+        app:layout_constraintTop_toTopOf="@+id/tv_Categories" />
+
+    <TextView
+        android:id="@+id/tv_Categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_imageType"
+        app:layout_constraintStart_toStartOf="@+id/tv_order"
+        app:layout_constraintTop_toBottomOf="@+id/tv_order" />
+
+    <TextView
+        android:id="@+id/tv_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_Categories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner_orders"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_order"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_Categories"
+        app:layout_constraintStart_toStartOf="@+id/spinner_Categories"
+        app:layout_constraintTop_toTopOf="@+id/tv_order"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_imageType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/image_type"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_orientation"
+        app:layout_constraintStart_toStartOf="@+id/tv_Categories"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Categories" />
+
+    <Spinner
+        android:id="@+id/spinner_imageTypes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_imageType"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_Categories"
+        app:layout_constraintStart_toStartOf="@+id/spinner_Categories"
+        app:layout_constraintTop_toTopOf="@+id/tv_imageType" />
+
+    <TextView
+        android:id="@+id/tv_orientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/orientation"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_editorsChoice"
+        app:layout_constraintStart_toStartOf="@+id/tv_imageType"
+        app:layout_constraintTop_toBottomOf="@+id/tv_imageType" />
+
+    <Spinner
+        android:id="@+id/spinner_orientations"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_orientation"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_imageTypes"
+        app:layout_constraintStart_toStartOf="@+id/spinner_Categories"
+        app:layout_constraintTop_toTopOf="@+id/tv_orientation" />
+
+    <TextView
+        android:id="@+id/tv_editorsChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editors_choice"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toTopOf="@+id/tv_safeSearch"
+        app:layout_constraintStart_toStartOf="@+id/tv_orientation"
+        app:layout_constraintTop_toBottomOf="@+id/tv_orientation" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_edictorsChoice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_editorsChoice"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_orientations"
+        app:layout_constraintStart_toStartOf="@+id/spinner_orientations"
+        app:layout_constraintTop_toTopOf="@+id/tv_editorsChoice" />
+
+    <TextView
+        android:id="@+id/tv_safeSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/safe_search"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_editorsChoice"
+        app:layout_constraintTop_toBottomOf="@+id/tv_editorsChoice" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_safeSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_safeSearch"
+        app:layout_constraintEnd_toEndOf="@+id/switch_edictorsChoice"
+        app:layout_constraintStart_toStartOf="@+id/switch_edictorsChoice"
+        app:layout_constraintTop_toTopOf="@+id/tv_safeSearch" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

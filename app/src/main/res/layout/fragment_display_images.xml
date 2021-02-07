@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_Search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@android:string/search_go"
+                android:textColor="@color/text_white"
+                android:textColorHint="@color/light_gray" />
+
+
+            <ImageButton
+                android:id="@+id/btn_Search"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@color/gray"
+                android:contentDescription="@string/cd_button_to_search_images_related_to_given_query"
+                android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+            <View
+                android:id="@+id/v_decorLine"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/light_gray" />
+
+            <ImageButton
+                android:id="@+id/btn_options"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:background="@color/gray"
+                app:srcCompat="@android:drawable/ic_menu_more" />
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ViewFlipper
+        android:id="@+id/view_flipper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_images_display"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_message_no_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/sorry_message"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/text_white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_server_unreachable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/server_unreachable"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/text_white" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/f_options"
+            android:name="com.marshallstudio.imager.OptionsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </ViewFlipper>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

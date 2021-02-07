@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">Imager</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cd_image">Image</string>
+    <string name="cd_button_to_search_images_related_to_given_query">Button to search images related to given query</string>
+    <string name="sorry_message">Sorry, we couldn\'t find what you\'re looking for 😔</string>
+    <string name="server_unreachable">Oops! The server is currently unreachable 😔</string>
+    <string name="source">Source</string>
+    <string name="category">Category</string>
+    <string name="image_type">Image Type</string>
+    <string name="orientation">Orientation</string>
+    <string name="order">Order</string>
+    <string name="editors_choice">Editors Choice</string>
+    <string name="safe_search">Safe Search</string>
+    <string name="an_image">An image</string>
+    <string name="download">Download</string>
+    <string name="Already_Downloaded">Already Downloaded</string>
+    <string name="downloaded">Downloaded</string>
+
+    <string-array name="image_sources">
+        <item>Pixabay</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>all</item>
+        <item>backgrounds</item>
+        <item>fashion</item>
+        <item>nature</item>
+        <item>science</item>
+        <item>education</item>
+        <item>feelings</item>
+        <item>health</item>
+        <item>people</item>
+        <item>religion</item>
+        <item>places</item>
+        <item>animals</item>
+        <item>industry</item>
+        <item>computer</item>
+        <item>food</item>
+        <item>sports</item>
+        <item>transportation</item>
+        <item>travel</item>
+        <item>buildings</item>
+        <item>business</item>
+        <item>music</item>
+    </string-array>
+
+    <string-array name="image_types">
+        <item>all</item>
+        <item>photo</item>
+        <item>illustration</item>
+        <item>vector</item>
+    </string-array>
+
+    <string-array name="orientations">
+        <item>all</item>
+        <item>horizontal</item>
+        <item>vertical</item>
+    </string-array>
+
+    <string-array name="orders">
+        <item>popular</item>
+        <item>latest</item>
+    </string-array>
+
+</resources>
